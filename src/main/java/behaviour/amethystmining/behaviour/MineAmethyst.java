@@ -13,7 +13,7 @@ public class MineAmethyst extends Leaf
 {
 
 	private long lastAnimation = 0;
-	private int timeout = 7_500;
+	private int timeout = 5_000;
 	private final Area AMETHYST_AREA = new Area(new Tile(3015, 9710, 0), new Tile(3031, 9698, 0));
 
 	@Override
