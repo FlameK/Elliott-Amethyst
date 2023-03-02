@@ -28,6 +28,7 @@ public class eAmethyst extends AbstractScript
 				.x(40)
 				.y(45)
 				.trackSkill(Skill.Mining)
+				.trackSkill(Skill.Crafting)
 				.addString("Status: ", () -> Data.scriptStatus)
 				.addString("Current Branch: ", () -> Tree.currentBranch)
 				.addString("Current Leaf: ", () -> Tree.currentLeaf)
