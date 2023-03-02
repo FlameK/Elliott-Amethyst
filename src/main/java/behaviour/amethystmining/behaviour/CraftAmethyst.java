@@ -33,7 +33,13 @@ public class CraftAmethyst extends Leaf
 			shouldCraft = false;
 		}
 
-		if (!LocalPlayer.isAnimating() && (System.currentTimeMillis() - lastAnimation) > timeout)
+		if (LocalPlayer.isAnimating())
+		{
+			lastAnimation = System.currentTimeMillis();
+			return ReactionGenerator.getPredictable();
+		}
+
+		if ((System.currentTimeMillis() - lastAnimation) > timeout)
 		{
 			Data.scriptStatus = "Crafting Amethyst";
 			craftable = AmethystData.Craftables.getBestCraftable();
@@ -57,13 +63,12 @@ public class CraftAmethyst extends Leaf
 			{
 				Data.scriptStatus = "Using Chisel on Amethyst";
 				amethyst.interact("Use");
-				Condition.wait(Chat::pendingInput, 100, 10);
+				Condition.wait(() -> Widgets.widget(AmethystData.PRODUCTION_PARENT_WIDGET).valid(), 100, 10);
 			}
 			return ReactionGenerator.getPredictable();
 		}
 
 		Data.scriptStatus = "Idle while Crafting";
-		if (lastAnimation == 0) lastAnimation = System.currentTimeMillis();
 		return ReactionGenerator.getPredictable();
 	}
 }

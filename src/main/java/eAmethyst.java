@@ -60,4 +60,6 @@ public class eAmethyst extends AbstractScript
 		new eAmethyst().startScript();
 	}
 
+
+
 }
