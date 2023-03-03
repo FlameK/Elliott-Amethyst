@@ -44,6 +44,7 @@ public class eAmethyst extends AbstractScript
 				new ZoomOut(),
 				new ContinueDialogue(),
 				new MissingItems(),
+				new WalkToAmethyst(),
 				new CraftAmethyst(),
 				new MineAmethyst()
 		);

@@ -2,6 +2,8 @@ package behaviour.amethystmining.data;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.powbot.api.Area;
+import org.powbot.api.Tile;
 import org.powbot.api.rt4.GrandExchange;
 import org.powbot.api.rt4.Skills;
 import org.powbot.api.rt4.walking.model.Skill;
@@ -13,6 +15,7 @@ public class AmethystData
 	public static int AMETHYST = 21347;
 	public static final int CHISEL = 1755;
 	public static final int PRODUCTION_PARENT_WIDGET = 270;
+	public static final Area AMETHYST_AREA = new Area(new Tile(3015, 9710, 0), new Tile(3031, 9698, 0));
 
 
 	@Getter
