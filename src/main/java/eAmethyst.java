@@ -23,7 +23,6 @@ public class eAmethyst extends AbstractScript
 	{
 
 		AmethystData.Craftables.getItemPrices();
-
 		addPaint(PaintBuilder.newBuilder()
 				.x(40)
 				.y(45)
@@ -34,9 +33,13 @@ public class eAmethyst extends AbstractScript
 				.addString("Current Leaf: ", () -> Tree.currentLeaf)
 				.trackInventoryItem(AmethystData.AMETHYST, "Amethyst Mined: ", TrackInventoryOption.QuantityChangeIncOny)
 				.trackInventoryItem(AmethystData.Craftables.AMETHYST_BOLT_TIPS.getItemID(), "Amethyst Bolt Tips Made: ", TrackInventoryOption.QuantityChangeIncOny)
+				.trackInventoryItem(AmethystData.Craftables.AMETHYST_BOLT_TIPS.getItemID(), "Amethyst Bolts Profit: ", TrackInventoryOption.Price)
 				.trackInventoryItem(AmethystData.Craftables.AMETHYST_ARROWTIPS.getItemID(), "Amethyst Arrow Tips Made: ", TrackInventoryOption.QuantityChangeIncOny)
+				.trackInventoryItem(AmethystData.Craftables.AMETHYST_ARROWTIPS.getItemID(), "Amethyst Arrows Profit: ", TrackInventoryOption.Price)
 				.trackInventoryItem(AmethystData.Craftables.AMETHYST_JAVELIN_HEADS.getItemID(), "Amethyst Javelin Heads Made: ", TrackInventoryOption.QuantityChangeIncOny)
+				.trackInventoryItem(AmethystData.Craftables.AMETHYST_JAVELIN_HEADS.getItemID(), "Amethyst Javelins Profit: ", TrackInventoryOption.Price)
 				.trackInventoryItem(AmethystData.Craftables.AMETHYST_DART_TIP.getItemID(), "Amethyst Dart Tips Made: ", TrackInventoryOption.QuantityChangeIncOny)
+				.trackInventoryItem(AmethystData.Craftables.AMETHYST_DART_TIP.getItemID(), "Amethyst Darts Profit: ", TrackInventoryOption.Price)
 				.build());
 
 
