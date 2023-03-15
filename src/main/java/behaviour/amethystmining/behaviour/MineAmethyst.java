@@ -23,7 +23,7 @@ public class MineAmethyst extends Leaf
 	@Override
 	public int onLoop()
 	{
-		GameObject amethyst = Objects.stream().name("Crystals").within(AmethystData.AMETHYST_AREA).nearest().first();
+		GameObject amethyst = Objects.stream().name("Amethyst crystals").within(AmethystData.AMETHYST_AREA).nearest().first();
 		Item gem = Inventory.stream().nameContains("Uncut").first();
 
 		if (LocalPlayer.isAnimating())
